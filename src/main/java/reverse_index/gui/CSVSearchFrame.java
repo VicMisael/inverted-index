@@ -116,7 +116,7 @@ public class CSVSearchFrame extends JFrame {
         List<RowItem> results = invertedIndex.find(query);
         listModel.clear();
         for (RowItem item : results) {
-            listModel.addElement(item.getAsChild().getIndexableString());
+            listModel.addElement(item.getAsChild().toString());
         }
     }
 

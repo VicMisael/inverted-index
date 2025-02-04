@@ -30,6 +30,6 @@ public class RowItem implements IRowItem<RowItem> {
 
     @Override
     public String toString() {
-       return record.get("text_content_anonymous");
+       return rowKey.getKey() + " " + record.get("text_content_anonymous");
     }
 }
