@@ -18,6 +18,7 @@ public class RowCollection implements IRowCollection<RowItem> {
     private final List<RowItem> rows = new ArrayList<>();
 
     public RowCollection(String csvFilePath) {
+
         try {
             Reader reader = Files.newBufferedReader(Paths.get(csvFilePath));
 
@@ -43,6 +44,10 @@ public class RowCollection implements IRowCollection<RowItem> {
     @Override
     public Iterator<RowItem> iterator() {
         return rows.iterator();
+    }
+
+    public long size(){
+        return rows.size();
     }
 
     @Override
